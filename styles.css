@@ -262,3 +262,30 @@ p {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
+/* Footer styling */
+.footer {
+  background-color: #02072B; /* match page background */
+  color: rgba(226, 232, 240, 0.8);
+  padding: 2rem 6rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+}
+
+.footer .footer-content p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.footer .footer-contacts a {
+  color: rgba(226, 232, 240, 0.8);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-contacts a:hover {
+  color: #E2E8F0; /* bright on hover */
+}
