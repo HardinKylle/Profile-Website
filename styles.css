@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* Reset */
 * {
   margin: 0;
@@ -10,7 +12,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
 
   /* Base background */
@@ -31,7 +33,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  background: transparent; /* Changed from rgba(2, 7, 43, 0.8) */
+  background: transparent;
   z-index: 1000;
 }
 
@@ -115,4 +117,10 @@ p {
 .dropdown-menu a:hover {
   background: rgba(255, 255, 255, 0.1);
   opacity: 1;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
