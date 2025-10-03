@@ -265,7 +265,7 @@ p {
 
 /* Footer styling */
 .footer {
-  background-color: #02072B; /* match page background */
+  background-color: transparent; /* match page background */
   color: rgba(226, 232, 240, 0.8);
   padding: 2rem 6rem;
   text-align: center;

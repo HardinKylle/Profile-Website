@@ -1,13 +1,15 @@
 document.addEventListener("mousemove", (e) => {
+  const x = e.clientX + window.scrollX;
+  const y = e.clientY + window.scrollY;
+
   document.body.style.background = `
     radial-gradient(
-      circle 500px at ${e.clientX}px ${e.clientY}px,
-      #051d44ff  0%,   /* slightly lighter than #02072B */
+      circle 500px at ${x}px ${y}px,
+      #051d44ff 0%, 
       #02072B 100%
     )
   `;
 });
-
 // Sidebar link active state (for the animated line)
 const sidebarLinks = document.querySelectorAll(".sidebar a");
 
