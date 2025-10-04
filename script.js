@@ -3,31 +3,111 @@ document.addEventListener("mousemove", (e) => {
   const y = e.clientY + window.scrollY;
   document.body.style.background = `
     radial-gradient(
-      circle 600px at ${x}px ${y}px,
+      circle 900px at ${x}px ${y}px,
       rgba(29, 78, 216, 0.15) 0%,
       transparent 50%
     ),
     radial-gradient(
-      circle 400px at ${x}px ${y}px,
+      circle 600px at ${x}px ${y}px,
       rgba(20, 64, 134, 0.1) 0%,
       transparent 50%
     ),
     radial-gradient(
-      circle 800px at ${x}px ${y}px,
+      circle 1200px at ${x}px ${y}px,
       rgba(15, 23, 42, 0.3) 0%,
       transparent 100%
     ),
     #020617
   `;
 });
-// Sidebar link active state (for the animated line)
-const sidebarLinks = document.querySelectorAll(".sidebar a");
 
+// Track current page
+let currentPage = null;
+
+// Function to load content into main section
+async function loadContent(page) {
+  // Don't reload if it's the same page
+  if (currentPage === page) {
+    return;
+  }
+  
+  const mainSection = document.querySelector(".main");
+  
+  // Add fade out effect
+  mainSection.style.opacity = "0";
+  
+  try {
+    // Fetch the content from the HTML file
+    const response = await fetch(page);
+    const content = await response.text();
+    
+    // Wait for fade out to complete
+    setTimeout(() => {
+      mainSection.innerHTML = content;
+      // Fade in the new content
+      mainSection.style.opacity = "1";
+      // Update current page
+      currentPage = page;
+    }, 300);
+    
+  } catch (error) {
+    console.error("Error loading content:", error);
+    mainSection.innerHTML = "<p>Error loading content. Please try again.</p>";
+    mainSection.style.opacity = "1";
+  }
+}
+
+// Function to update active state in sidebar
+function updateSidebarActive(page) {
+  const sidebarLinks = document.querySelectorAll(".sidebar a");
+  sidebarLinks.forEach(link => {
+    if (link.getAttribute("href") === page) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+}
+
+// Sidebar link active state and content loading
+const sidebarLinks = document.querySelectorAll(".sidebar a");
 sidebarLinks.forEach(link => {
-  link.addEventListener("click", function () {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    
     // Remove active class from all links
     sidebarLinks.forEach(l => l.classList.remove("active"));
     // Add active class to the clicked one
     this.classList.add("active");
+    
+    // Get the page to load from href attribute
+    const page = this.getAttribute("href");
+    
+    // Load the content
+    loadContent(page);
   });
+});
+
+// Dropdown menu links content loading
+const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
+dropdownLinks.forEach(link => {
+  link.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    
+    // Only handle if it's a .html file (not # anchor)
+    if (href.endsWith(".html")) {
+      e.preventDefault(); // Prevent default anchor behavior
+      
+      // Update sidebar active state
+      updateSidebarActive(href);
+      
+      // Load the content
+      loadContent(href);
+    }
+  });
+});
+
+// Load default content (about page) on page load
+window.addEventListener("DOMContentLoaded", () => {
+  loadContent("about.html");
 });

@@ -132,7 +132,7 @@ p {
   min-height: 90vh;
   background: transparent;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Sidebar (30%) */
@@ -252,6 +252,19 @@ p {
 .main {
   flex: 0 0 70%;
   padding: 2rem 3rem;
+  transition: opacity 0.3s ease;
+  text-align: left;
+}
+.main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #E2E8F0;     /* Keep headers bright */
+}
+
+.main p {
+  font-size: 16px;    /* Paragraph size */
+  color: rgba(226, 232, 240, 0.6);     /* Paragraph color */
+  line-height: 1.8;
 }
 
 .main section {
@@ -261,6 +274,34 @@ p {
 .main h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.education-entry {
+  margin-bottom: 2.5rem;
+}
+
+.education-entry h2 {
+  color: #E2E8F0;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-entry h3 {
+  color: rgba(226, 232, 240, 0.8);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.education-entry .date {
+  color: rgba(226, 232, 240, 0.5);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.education-entry .coursework {
+  color: rgba(226, 232, 240, 0.7);
+  font-size: 0.95rem;
 }
 
 /* Change text selection color */
