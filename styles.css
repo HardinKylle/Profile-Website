@@ -263,6 +263,18 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Change text selection color */
+::selection {
+  background-color: #5dcec1; /* highlight color */
+  color: #3d3c3c;            /* text color when highlighted */
+}
+
+/* For Firefox (needs special prefix) */
+::-moz-selection {
+  background-color: #5dcec1;
+  color: #000000;
+}
+
 /* Footer styling */
 .footer {
   background-color: transparent; /* match page background */
