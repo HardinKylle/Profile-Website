@@ -281,6 +281,15 @@ p {
   margin-bottom: 1rem;
 }
 
+.highlight-name {
+  color: #E2E8F0; /* White/bright color */
+  font-weight: 600; /* Make it slightly bolder */
+  transition: color 0.3s ease;
+  cursor: pointer; /* Shows it's interactive */
+}
+.highlight-name:hover {
+  color: #5dcec1; /* Blue-green color (matches your theme) */
+}
 .education-entry {
   margin-bottom: 2.5rem;
 }
