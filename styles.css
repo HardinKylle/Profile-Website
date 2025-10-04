@@ -32,7 +32,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 6rem;
+  padding: 1.5rem 6rem;
   background: transparent;
   z-index: 1000;
 }
@@ -128,18 +128,23 @@ p {
 .layout {
   display: flex;
   width: 70%; /* total container width */
-  margin: 120px auto 40px auto; /* center horizontally, spacing below header */
+  margin: 70px auto 40px auto; /* center horizontally, spacing below header */
   min-height: 90vh;
   background: transparent;
   border-radius: 12px;
   overflow: visible;
+  
 }
 
 /* Sidebar (30%) */
 .sidebar {
   flex: 0 0 40%;
-  background :transparent;
+  background: transparent;
   padding: 2rem 1.5rem;
+  margin-right: 4rem;
+  position: sticky;
+  top: 70px;
+  max-height: calc(100vh - 140px);
 }
 
 .sidebar h2 {
@@ -250,7 +255,7 @@ p {
 }
 /* Main content (70%) */
 .main {
-  flex: 0 0 70%;
+  flex: 1;
   padding: 2rem 3rem;
   transition: opacity 0.3s ease;
   text-align: left;

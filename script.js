@@ -17,7 +17,7 @@ document.addEventListener("mousemove", (e) => {
       rgba(15, 23, 42, 0.3) 0%,
       transparent 100%
     ),
-    #020617
+    #080d24ff
   `;
 });
 
@@ -30,17 +30,17 @@ async function loadContent(page) {
   if (currentPage === page) {
     return;
   }
-  
+
   const mainSection = document.querySelector(".main");
-  
+
   // Add fade out effect
   mainSection.style.opacity = "0";
-  
+
   try {
     // Fetch the content from the HTML file
     const response = await fetch(page);
     const content = await response.text();
-    
+
     // Wait for fade out to complete
     setTimeout(() => {
       mainSection.innerHTML = content;
@@ -48,8 +48,9 @@ async function loadContent(page) {
       mainSection.style.opacity = "1";
       // Update current page
       currentPage = page;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 300);
-    
+
   } catch (error) {
     console.error("Error loading content:", error);
     mainSection.innerHTML = "<p>Error loading content. Please try again.</p>";
@@ -74,15 +75,15 @@ const sidebarLinks = document.querySelectorAll(".sidebar a");
 sidebarLinks.forEach(link => {
   link.addEventListener("click", function (e) {
     e.preventDefault(); // Prevent default anchor behavior
-    
+
     // Remove active class from all links
     sidebarLinks.forEach(l => l.classList.remove("active"));
     // Add active class to the clicked one
     this.classList.add("active");
-    
+
     // Get the page to load from href attribute
     const page = this.getAttribute("href");
-    
+
     // Load the content
     loadContent(page);
   });
@@ -93,14 +94,14 @@ const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
 dropdownLinks.forEach(link => {
   link.addEventListener("click", function (e) {
     const href = this.getAttribute("href");
-    
+
     // Only handle if it's a .html file (not # anchor)
     if (href.endsWith(".html")) {
       e.preventDefault(); // Prevent default anchor behavior
-      
+
       // Update sidebar active state
       updateSidebarActive(href);
-      
+
       // Load the content
       loadContent(href);
     }
@@ -115,11 +116,12 @@ window.addEventListener("DOMContentLoaded", () => {
 // Handle contact link to scroll to footer
 const contactLinks = document.querySelectorAll('a[href="#contact"], a[href="contact.html"]');
 contactLinks.forEach(link => {
-  link.addEventListener("click", function(e) {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
-    
+
     // Scroll to footer smoothly
     const footer = document.querySelector('.footer');
     footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
