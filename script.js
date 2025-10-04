@@ -111,3 +111,15 @@ dropdownLinks.forEach(link => {
 window.addEventListener("DOMContentLoaded", () => {
   loadContent("about.html");
 });
+
+// Handle contact link to scroll to footer
+const contactLinks = document.querySelectorAll('a[href="#contact"], a[href="contact.html"]');
+contactLinks.forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    
+    // Scroll to footer smoothly
+    const footer = document.querySelector('.footer');
+    footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
