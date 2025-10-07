@@ -3,17 +3,17 @@ document.addEventListener("mousemove", (e) => {
   const y = e.clientY + window.scrollY;
   document.body.style.background = `
     radial-gradient(
-      circle 900px at ${x}px ${y}px,
+      circle 1200px at ${x}px ${y}px,
       rgba(29, 78, 216, 0.15) 0%,
       transparent 50%
     ),
     radial-gradient(
-      circle 600px at ${x}px ${y}px,
+      circle 900px at ${x}px ${y}px,
       rgba(20, 64, 134, 0.1) 0%,
       transparent 50%
     ),
     radial-gradient(
-      circle 1200px at ${x}px ${y}px,
+      circle 1500px at ${x}px ${y}px,
       rgba(15, 23, 42, 0.3) 0%,
       transparent 100%
     ),
