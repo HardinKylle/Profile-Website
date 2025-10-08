@@ -128,12 +128,12 @@ contactLinks.forEach(link => {
 // Typing animation for multilingual titles
 const titles = [
   "Software Engineer",
+   "ソフトウェアエンジニア", // Japanese
+  "소프트웨어 엔지니어", // Korean
   "Ingeniero de Software", // Spanish
   "Ingénieur Logiciel", // French
   "Software-Ingenieur", // German
   "软件工程师", // Chinese
-  "ソフトウェアエンジニア", // Japanese
-  "소프트웨어 엔지니어", // Korean
   "Инженер-программист", // Russian
   "Engenheiro de Software" // Portuguese
 ];
