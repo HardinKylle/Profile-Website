@@ -325,8 +325,15 @@ p {
   /* Blue-green color (matches your theme) */
 }
 
+/* --- Main Education Section Styles --- */
 .education-entry {
   margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(93, 206, 193, 0.3); /* Separator line */
+}
+
+.education-entry:last-child {
+    border-bottom: none; /* Remove border from the last item */
 }
 
 .education-entry h2 {
@@ -336,31 +343,54 @@ p {
 }
 
 .education-entry h3 {
-  color: rgba(226, 232, 240, 0.8);
+  color: #94A3B8; /* Softer color */
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .education-entry .date {
-  color: rgba(226, 232, 240, 0.5);
+  color: #64748B; /* More subtle color */
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-.education-entry .coursework {
-  color: rgba(226, 232, 240, 0.7);
+.education-entry p {
+    color: #94A3B8;
+    line-height: 1.6;
+}
+
+/* Container for the coursework section */
+.coursework-container {
+  margin-top: 1.5rem;
+}
+
+.coursework-container strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #E2E8F0;
+  font-weight: 500;
   font-size: 0.95rem;
 }
 
-.advocacy-item {
-  margin-bottom: 2rem;
+/* The list that holds the badges */
+.coursework-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
 }
 
-.advocacy-item h2 {
-  color: #E2E8F0;
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
+/* Styling for each coursework badge */
+.coursework-list li {
+  background: rgba(93, 206, 193, 0.1);
+  border: 1px solid rgba(93, 206, 193, 0.3);
+  border-radius: 2rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  color: #5dcec1;
+  font-weight: 500;
 }
 
 .experience-item {
@@ -543,10 +573,20 @@ css.cert-category {
   color: #E2E8F0;
 }
 
+.advocacy-item {
+  margin-bottom: 2rem;
+}
+
+.advocacy-item h2 {
+  color: #E2E8F0;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
 .advocacy-hero {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid rgba(93, 206, 193, 0.3);
+  border-bottom: 1px solid rgba(93, 206, 193, 0.3);
 }
 
 .advocacy-hero h2 {
@@ -630,7 +670,7 @@ css.cert-category {
 
 /* The main card for each project */
 .project-card {
-  background-color: #1E293B; /* A dark slate color */
+  background-color: transparent; /* A dark slate color */
   border-radius: 12px;
   overflow: hidden; /* Ensures the image corners are rounded */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -727,6 +767,43 @@ css.cert-category {
 ::-moz-selection {
   background-color: #5dcec1;
   color: #000000;
+}
+
+.translate-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.translate-text.translating {
+  opacity: 0.3;
+}
+
+.translate-text::after {
+  content: attr(data-current-translation);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5dcec1;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #5dcec1;
+  animation: none;
+}
+
+.translate-text.show-translation::after {
+  opacity: 1;
+  animation: typing 1s steps(20) forwards, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 /* Footer styling */
