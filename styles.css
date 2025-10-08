@@ -178,8 +178,23 @@ p {
 .sidebar-header h4 {
   font-size: 20px;
   font-weight: 500;
-  color: #E2E8F0;
+  color: #5dcec1;
   margin-bottom: 1.5rem;
+}
+
+#typed-text::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 
 .sidebar-header p {
@@ -189,10 +204,7 @@ p {
   margin-bottom: 4rem;
 }
 
-.sidebar-header h4:hover {
-  color: #5dcec1;
-  /* Blue-green color (matches your theme) */
-}
+
 
 /* Sidebar links default (less visible) */
 .sidebar a {

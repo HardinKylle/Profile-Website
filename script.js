@@ -125,3 +125,57 @@ contactLinks.forEach(link => {
   });
 });
 
+// Typing animation for multilingual titles
+const titles = [
+  "Software Engineer",
+  "Ingeniero de Software", // Spanish
+  "Ingénieur Logiciel", // French
+  "Software-Ingenieur", // German
+  "软件工程师", // Chinese
+  "ソフトウェアエンジニア", // Japanese
+  "소프트웨어 엔지니어", // Korean
+  "Инженер-программист", // Russian
+  "Engenheiro de Software" // Portuguese
+];
+
+let titleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typedTextElement = document.getElementById('typed-text');
+
+function type() {
+  const currentTitle = titles[titleIndex];
+  
+  if (isDeleting) {
+    // Remove characters
+    typedTextElement.textContent = currentTitle.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    // Add characters
+    typedTextElement.textContent = currentTitle.substring(0, charIndex + 1);
+    charIndex++;
+  }
+  
+  // Determine typing speed
+  let typeSpeed = isDeleting ? 50 : 100;
+  
+  // Check if word is complete
+  if (!isDeleting && charIndex === currentTitle.length) {
+    // Pause at end of word
+    typeSpeed = 2000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    // Move to next word
+    isDeleting = false;
+    titleIndex = (titleIndex + 1) % titles.length;
+    typeSpeed = 500;
+  }
+  
+  setTimeout(type, typeSpeed);
+}
+
+// Start typing animation when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(type, 1000); // Start after 1 second delay
+});
+
