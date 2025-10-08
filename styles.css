@@ -180,6 +180,8 @@ p {
   font-weight: 500;
   color: #5dcec1;
   margin-bottom: 1.5rem;
+  height: 30px; /* Fixed height to prevent shifting */
+  line-height: 30px; /* Match the height for vertical centering */
 }
 
 #typed-text::after {
@@ -394,6 +396,9 @@ p {
   padding: 0;
 }
 
+.coursework-list li:hover {
+  background: rgba(93, 206, 193, 0.2);
+}
 /* Styling for each coursework badge */
 .coursework-list li {
   background: rgba(93, 206, 193, 0.1);
@@ -528,10 +533,8 @@ p {
   /* Smooth hover transition */
 }
 
-/* --- NEW hover effect --- */
 .skill-list li:hover {
   background: rgba(93, 206, 193, 0.2);
-  /* Background gets slightly more opaque on hover */
 }
 
 css.cert-category {
