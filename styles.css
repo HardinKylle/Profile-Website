@@ -23,7 +23,6 @@ body {
   transition: background 0.1s ease-out;
 }
 
-/* Header styles */
 .header {
   position: fixed;
   top: 0;
@@ -32,8 +31,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 6rem;
-  background: transparent;
+  padding: 1.5rem 4rem;
+    background: rgba(8, 13, 36, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(8, 13, 36, 0.4);
   z-index: 1000;
 }
 
@@ -927,13 +929,15 @@ css.cert-category {
     padding-right: 1.5rem;
   }
 
-  .header {
-    background: #080d24ff;
-    /* Changed from transparent */
-  }
-
   /* Make project grid one column on smaller devices */
   .project-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1300px) {
+
+  .sidebar{
+    position: static;
   }
 }
