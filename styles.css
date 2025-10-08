@@ -14,8 +14,6 @@ body {
   flex-direction: column;
   font-family: 'Inter', sans-serif;
   color: #E2E8F0;
-
-  /* Base background */
   background: #080d24ff;
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,9 +129,7 @@ p {
 .layout {
   display: flex;
   width: 70%;
-  /* total container width */
   margin: 70px auto 40px auto;
-  /* center horizontally, spacing below header */
   min-height: 90vh;
   background: transparent;
   border-radius: 12px;
@@ -167,7 +163,6 @@ p {
 
 .sidebar-header {
   margin-bottom: 2rem;
-  /* space between header and menu list */
 }
 
 .sidebar-header h3 {
@@ -183,9 +178,7 @@ p {
   color: #5dcec1;
   margin-bottom: 1.5rem;
   height: 30px;
-  /* Fixed height to prevent shifting */
   line-height: 30px;
-  /* Match the height for vertical centering */
 }
 
 #typed-text::after {
@@ -214,14 +207,11 @@ p {
   margin-bottom: 4rem;
 }
 
-
-
 /* Sidebar links default (less visible) */
 .sidebar a {
   position: relative;
   display: inline-block;
   color: rgba(255, 255, 255, 0.5);
-  /* faded text */
   text-decoration: none;
   font-weight: 700;
   font-size: 12px;
@@ -242,28 +232,23 @@ p {
 /* hover effect (full opacity) */
 .sidebar a:hover {
   color: #E2E8F0;
-  /* bright text */
   padding-left: 70px;
 }
 
 .sidebar a:hover::before {
   width: 60px;
   background-color: #E2E8F0;
-  /* solid line */
 }
 
 /* active/selected (stay fully visible) */
 .sidebar a.active {
   color: #E2E8F0;
-  /* solid text */
   padding-left: 70px;
 }
 
 .sidebar a.active::before {
   width: 60px;
-  background-color: #E2E8F0;
-  /* solid line */
-}
+  background-color: #E2E8F0;}
 
 .sidebar li {
   margin-bottom: 2rem;
@@ -272,32 +257,21 @@ p {
 /* Menu detail styling */
 .menu-detail {
   font-size: 0.75rem;
-  /* smaller than main link */
   color: rgba(255, 255, 255, 0.9);
-  /* visible when hovered */
   margin: 2px 0 0 0;
-  /* space below main link */
   line-height: 1.2rem;
-  /* spacing between lines */
   max-width: 200px;
-  /* wrap text nicely */
   opacity: 0;
-  /* hidden by default */
   height: 0;
-  /* collapse space when hidden */
   overflow: hidden;
-  /* hide text */
   transition: opacity 0.3s ease, height 0.3s ease;
   padding-left: 70px;
-  /* align with text after line */
 }
 
 /* Show detail only on hover */
 .sidebar a:hover+.menu-detail {
   opacity: 1;
-  /* fade in */
   height: auto;
-  /* expand to fit text */
 }
 
 /* Main content (70%) */
@@ -312,14 +286,11 @@ p {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #E2E8F0;
-  /* Keep headers bright */
 }
 
 .main p {
   font-size: 16px;
-  /* Paragraph size */
   color: rgba(226, 232, 240, 0.6);
-  /* Paragraph color */
   line-height: 1.8;
 }
 
@@ -334,17 +305,13 @@ p {
 
 .highlight-name {
   color: #E2E8F0;
-  /* White/bright color */
   font-weight: 600;
-  /* Make it slightly bolder */
   transition: color 0.3s ease;
   cursor: pointer;
-  /* Shows it's interactive */
 }
 
 .highlight-name:hover {
   color: #5dcec1;
-  /* Blue-green color (matches your theme) */
 }
 
 /* --- Main Education Section Styles --- */
@@ -352,12 +319,10 @@ p {
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(93, 206, 193, 0.3);
-  /* Separator line */
 }
 
 .education-entry:last-child {
   border-bottom: none;
-  /* Remove border from the last item */
 }
 
 .education-entry h2 {
@@ -368,7 +333,6 @@ p {
 
 .education-entry h3 {
   color: #94A3B8;
-  /* Softer color */
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -376,7 +340,6 @@ p {
 
 .education-entry .date {
   color: #64748B;
-  /* More subtle color */
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -386,7 +349,6 @@ p {
   line-height: 1.6;
 }
 
-/* Container for the coursework section */
 .coursework-container {
   margin-top: 1.5rem;
 }
@@ -399,7 +361,6 @@ p {
   font-size: 0.95rem;
 }
 
-/* The list that holds the badges */
 .coursework-list {
   display: flex;
   flex-wrap: wrap;
@@ -425,12 +386,9 @@ p {
 
 .experience-item {
   position: relative;
-  /* Establishes a positioning context for the timeline dot */
   padding: 1.5rem 1.5rem 1.5rem 3rem;
-  /* Adds space for the timeline elements */
   margin-bottom: 2rem;
   border-left: 3px solid #334155;
-  /* The main vertical timeline bar */
   transition: background-color 0.3s ease-in-out;
   border-radius: 8px;
 }
@@ -440,30 +398,23 @@ p {
   content: '';
   position: absolute;
   left: -9px;
-  /* Centers the dot on the 3px border */
   top: 28px;
-  /* Adjust this value to align the dot with the h2 text */
   width: 15px;
   height: 15px;
   background-color: #5eead4;
-  /* A bright accent color */
   border-radius: 50%;
   border: 3px solid #0F172A;
-  /* Creates a hollow effect, match this to your page background */
 }
 
-/* --- Typography & Content Styling --- */
 
 .experience-item h2 {
   color: #E2E8F0;
-  /* Brighter color for the main title */
   font-size: 1.4rem;
   margin-bottom: 0.25rem;
 }
 
 .experience-item h3 {
   color: #94A3B8;
-  /* A slightly softer color for the subtitle */
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -471,38 +422,30 @@ p {
 
 .experience-item .date {
   color: #64748B;
-  /* More subtle color for the date */
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-/* Styling for the list of responsibilities */
 .experience-item .responsibilities {
   list-style: none;
-  /* Remove default browser bullet points */
   padding-left: 0;
   margin-top: 1rem;
 }
 
 .experience-item .responsibilities li {
   position: relative;
-  /* Required for positioning the custom bullet */
   padding-left: 25px;
-  /* Creates space for the custom bullet */
   margin-bottom: 0.75rem;
   line-height: 1.6;
   color: #94A3B8;
-  /* Softer color for list items */
 }
 
-/* Custom bullet points for a polished look */
 .experience-item .responsibilities li::before {
   content: '›';
   position: absolute;
   left: 0;
   top: 0;
   color: #5eead4;
-  /* Accent color to match the timeline dot */
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -517,33 +460,22 @@ p {
   margin-bottom: 1rem;
 }
 
-/* This turns the list into a flexible container */
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  /* Allows items to wrap onto the next line */
   gap: 0.75rem;
-  /* Adds space between the skill pills */
   list-style: none;
-  /* Removes the default bullet points */
   padding: 0;
 }
 
-/* --- NEW styles for each skill pill, based on your example --- */
 .skill-list li {
   background: rgba(93, 206, 193, 0.1);
-  /* Translucent teal background */
   border: 1px solid rgba(93, 206, 193, 0.3);
-  /* Slightly opaque teal border */
   border-radius: 2rem;
-  /* Pill shape */
   padding: 0.5rem 1rem;
-  /* Inner spacing */
   color: #5dcec1;
-  /* Light text color */
   font-size: 0.95rem;
   transition: background 0.3s ease;
-  /* Smooth hover transition */
 }
 
 .skill-list li:hover {
@@ -691,8 +623,6 @@ css.cert-category {
 /* The grid container for all the project cards */
 .project-grid {
   display: grid;
-  /* Creates a responsive grid: columns are at least 320px, 
-     and will auto-fit as many as possible per row. */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
 }
@@ -703,17 +633,14 @@ css.cert-category {
   /* A dark slate color */
   border-radius: 12px;
   overflow: hidden;
-  /* Ensures the image corners are rounded */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  /* Stacks image and content vertically */
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  /* Lifts the card on hover */
   box-shadow: 0 8px 15px rgba(93, 206, 193, 0.1), 0 20px 40px rgba(93, 206, 193, 0.15);
 }
 
@@ -721,9 +648,7 @@ css.cert-category {
 .project-image img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  /* Ensures a consistent 16:9 aspect ratio */
   object-fit: cover;
-  /* Prevents image distortion */
   display: block;
 }
 
@@ -733,7 +658,6 @@ css.cert-category {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  /* Allows this container to fill the remaining space */
 }
 
 .project-content h3 {
@@ -771,12 +695,10 @@ css.cert-category {
   font-weight: 500;
 }
 
-/* Links for live demo and source code */
 .project-links {
   display: flex;
   gap: 1.5rem;
   margin-top: auto;
-  /* Pushes links to the very bottom */
 }
 
 .project-links a {
@@ -791,18 +713,13 @@ css.cert-category {
 
 .project-links a:hover {
   color: #5eead4;
-  /* Accent color on hover */
 }
 
-/* Change text selection color */
 ::selection {
   background-color: #5dcec1;
-  /* highlight color */
   color: #3d3c3c;
-  /* text color when highlighted */
 }
 
-/* For Firefox (needs special prefix) */
 ::-moz-selection {
   background-color: #5dcec1;
   color: #000000;
@@ -881,55 +798,57 @@ css.cert-category {
   /* bright on hover */
 }
 
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 10px; 
+  border: 3px solid #0F172A; 
+}
+
+
 /* --- Responsive Styles --- */
 @media (max-width: 992px) {
 
-  /* 1. Adjust main layout to be full-width and single-column */
   .layout {
     flex-direction: column;
-    /* Stack sidebar and main content vertically */
     width: 90%;
-    /* Use more of the screen width */
     margin-top: 80px;
-    /* Adjust top margin */
   }
 
-  /* 2. Reset the sidebar to act like a normal content block */
   .sidebar {
     position: static;
-    /* Remove the sticky positioning */
     flex-basis: auto;
-    /* Let it take its natural height */
     max-height: none;
-    /* Remove height restrictions */
     margin-right: 0;
     padding: 2rem 1rem;
-    /* Adjust padding */
   }
 
-  /* 3. Hide the navigation list in the sidebar as requested */
   .sidebar ul {
     display: none;
   }
 
-  /* Remove extra space at the bottom of the sidebar header */
   .sidebar-header p {
     margin-bottom: 0;
   }
 
-  /* 4. Adjust padding for main content */
   .main {
     padding: 1.5rem;
   }
 
-  /* 5. Adjust header and footer padding for smaller screens */
   .header,
   .footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
-  /* Make project grid one column on smaller devices */
   .project-grid {
     grid-template-columns: 1fr;
   }
