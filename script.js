@@ -4,19 +4,10 @@ document.addEventListener("mousemove", (e) => {
   document.body.style.background = `
     radial-gradient(
       circle 900px at ${x}px ${y}px,
-      rgba(29, 78, 216, 0.15) 0%,
-      transparent 50%
+      rgba(48, 97, 231, 0.15) 0%,
+      transparent 60%
     ),
-    radial-gradient(
-      circle 600px at ${x}px ${y}px,
-      rgba(20, 64, 134, 0.1) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle 900px at ${x}px ${y}px,
-      rgba(15, 23, 42, 0.3) 0%,
-      transparent 800%
-    ),
+    
     #080d24ff
   `;
 });
@@ -26,12 +17,15 @@ let currentPage = null;
 
 // Function to load content into main section
 async function loadContent(page) {
-  // Don't reload if it's the same page
+  const mainSection = document.querySelector(".main");
+
+  // Always scroll to top first, before any animations
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Don't reload if it's the same page (but we already scrolled)
   if (currentPage === page) {
     return;
   }
-
-  const mainSection = document.querySelector(".main");
 
   // Add fade out effect
   mainSection.style.opacity = "0";
@@ -48,7 +42,6 @@ async function loadContent(page) {
       mainSection.style.opacity = "1";
       // Update current page
       currentPage = page;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 300);
 
   } catch (error) {
@@ -128,7 +121,7 @@ contactLinks.forEach(link => {
 // Typing animation for multilingual titles
 const titles = [
   "Software Engineer",
-   "ソフトウェアエンジニア", // Japanese
+  "ソフトウェアエンジニア", // Japanese
   "소프트웨어 엔지니어", // Korean
   "Ingeniero de Software", // Spanish
   "Ingénieur Logiciel", // French
@@ -145,7 +138,7 @@ let typedTextElement = document.getElementById('typed-text');
 
 function type() {
   const currentTitle = titles[titleIndex];
-  
+
   if (isDeleting) {
     // Remove characters
     typedTextElement.textContent = currentTitle.substring(0, charIndex - 1);
@@ -155,10 +148,10 @@ function type() {
     typedTextElement.textContent = currentTitle.substring(0, charIndex + 1);
     charIndex++;
   }
-  
+
   // Determine typing speed
   let typeSpeed = isDeleting ? 50 : 100;
-  
+
   // Check if word is complete
   if (!isDeleting && charIndex === currentTitle.length) {
     // Pause at end of word
@@ -170,7 +163,7 @@ function type() {
     titleIndex = (titleIndex + 1) % titles.length;
     typeSpeed = 500;
   }
-  
+
   setTimeout(type, typeSpeed);
 }
 
