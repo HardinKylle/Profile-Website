@@ -364,36 +364,72 @@ p {
 }
 
 .experience-item {
-  margin-bottom: 2.5rem;
+  position: relative; /* Establishes a positioning context for the timeline dot */
+  padding: 1.5rem 1.5rem 1.5rem 3rem; /* Adds space for the timeline elements */
+  margin-bottom: 2rem;
+  border-left: 3px solid #334155; /* The main vertical timeline bar */
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 8px;
 }
 
+/* The dot on the timeline, aligned with the heading */
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -9px; /* Centers the dot on the 3px border */
+  top: 28px; /* Adjust this value to align the dot with the h2 text */
+  width: 15px;
+  height: 15px;
+  background-color: #5eead4; /* A bright accent color */
+  border-radius: 50%;
+  border: 3px solid #0F172A; /* Creates a hollow effect, match this to your page background */
+}
+
+/* --- Typography & Content Styling --- */
+
 .experience-item h2 {
-  color: #E2E8F0;
+  color: #E2E8F0; /* Brighter color for the main title */
   font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .experience-item h3 {
-  color: rgba(226, 232, 240, 0.8);
+  color: #94A3B8; /* A slightly softer color for the subtitle */
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .experience-item .date {
-  color: rgba(226, 232, 240, 0.5);
+  color: #64748B; /* More subtle color for the date */
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
+/* Styling for the list of responsibilities */
 .experience-item .responsibilities {
+  list-style: none; /* Remove default browser bullet points */
+  padding-left: 0;
   margin-top: 1rem;
-  padding-left: 1.5rem;
 }
 
 .experience-item .responsibilities li {
-  margin-bottom: 0.5rem;
+  position: relative; /* Required for positioning the custom bullet */
+  padding-left: 25px; /* Creates space for the custom bullet */
+  margin-bottom: 0.75rem;
   line-height: 1.6;
+  color: #94A3B8; /* Softer color for list items */
+}
+
+/* Custom bullet points for a polished look */
+.experience-item .responsibilities li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5eead4; /* Accent color to match the timeline dot */
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .skill-category {
