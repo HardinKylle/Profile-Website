@@ -364,10 +364,13 @@ p {
 }
 
 .experience-item {
-  position: relative; /* Establishes a positioning context for the timeline dot */
-  padding: 1.5rem 1.5rem 1.5rem 3rem; /* Adds space for the timeline elements */
+  position: relative;
+  /* Establishes a positioning context for the timeline dot */
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  /* Adds space for the timeline elements */
   margin-bottom: 2rem;
-  border-left: 3px solid #334155; /* The main vertical timeline bar */
+  border-left: 3px solid #334155;
+  /* The main vertical timeline bar */
   transition: background-color 0.3s ease-in-out;
   border-radius: 8px;
 }
@@ -376,49 +379,60 @@ p {
 .experience-item::before {
   content: '';
   position: absolute;
-  left: -9px; /* Centers the dot on the 3px border */
-  top: 28px; /* Adjust this value to align the dot with the h2 text */
+  left: -9px;
+  /* Centers the dot on the 3px border */
+  top: 28px;
+  /* Adjust this value to align the dot with the h2 text */
   width: 15px;
   height: 15px;
-  background-color: #5eead4; /* A bright accent color */
+  background-color: #5eead4;
+  /* A bright accent color */
   border-radius: 50%;
-  border: 3px solid #0F172A; /* Creates a hollow effect, match this to your page background */
+  border: 3px solid #0F172A;
+  /* Creates a hollow effect, match this to your page background */
 }
 
 /* --- Typography & Content Styling --- */
 
 .experience-item h2 {
-  color: #E2E8F0; /* Brighter color for the main title */
+  color: #E2E8F0;
+  /* Brighter color for the main title */
   font-size: 1.4rem;
   margin-bottom: 0.25rem;
 }
 
 .experience-item h3 {
-  color: #94A3B8; /* A slightly softer color for the subtitle */
+  color: #94A3B8;
+  /* A slightly softer color for the subtitle */
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .experience-item .date {
-  color: #64748B; /* More subtle color for the date */
+  color: #64748B;
+  /* More subtle color for the date */
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
 /* Styling for the list of responsibilities */
 .experience-item .responsibilities {
-  list-style: none; /* Remove default browser bullet points */
+  list-style: none;
+  /* Remove default browser bullet points */
   padding-left: 0;
   margin-top: 1rem;
 }
 
 .experience-item .responsibilities li {
-  position: relative; /* Required for positioning the custom bullet */
-  padding-left: 25px; /* Creates space for the custom bullet */
+  position: relative;
+  /* Required for positioning the custom bullet */
+  padding-left: 25px;
+  /* Creates space for the custom bullet */
   margin-bottom: 0.75rem;
   line-height: 1.6;
-  color: #94A3B8; /* Softer color for list items */
+  color: #94A3B8;
+  /* Softer color for list items */
 }
 
 /* Custom bullet points for a polished look */
@@ -427,7 +441,8 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  color: #5eead4; /* Accent color to match the timeline dot */
+  color: #5eead4;
+  /* Accent color to match the timeline dot */
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -445,27 +460,38 @@ p {
 /* This turns the list into a flexible container */
 .skill-list {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap onto the next line */
-  gap: 0.75rem; /* Adds space between the skill pills */
-  list-style: none; /* Removes the default bullet points */
+  flex-wrap: wrap;
+  /* Allows items to wrap onto the next line */
+  gap: 0.75rem;
+  /* Adds space between the skill pills */
+  list-style: none;
+  /* Removes the default bullet points */
   padding: 0;
 }
 
 /* --- NEW styles for each skill pill, based on your example --- */
 .skill-list li {
-  background: rgba(93, 206, 193, 0.1);  /* Translucent teal background */
-  border: 1px solid rgba(93, 206, 193, 0.3); /* Slightly opaque teal border */
-  border-radius: 2rem;                     /* Pill shape */
-  padding: 0.5rem 1rem;                    /* Inner spacing */
-  color: #5dcec1;                         /* Light text color */
+  background: rgba(93, 206, 193, 0.1);
+  /* Translucent teal background */
+  border: 1px solid rgba(93, 206, 193, 0.3);
+  /* Slightly opaque teal border */
+  border-radius: 2rem;
+  /* Pill shape */
+  padding: 0.5rem 1rem;
+  /* Inner spacing */
+  color: #5dcec1;
+  /* Light text color */
   font-size: 0.95rem;
-  transition: background 0.3s ease;        /* Smooth hover transition */
+  transition: background 0.3s ease;
+  /* Smooth hover transition */
 }
 
 /* --- NEW hover effect --- */
 .skill-list li:hover {
-  background: rgba(93, 206, 193, 0.2);  /* Background gets slightly more opaque on hover */
+  background: rgba(93, 206, 193, 0.2);
+  /* Background gets slightly more opaque on hover */
 }
+
 css.cert-category {
   margin-bottom: 3rem;
 }
@@ -574,7 +600,7 @@ css.cert-category {
   border-radius: 2rem;
   padding: 0.5rem 1rem;
   margin-top: 1.5rem;
-  color: #E2E8F0;
+  color: #5dcec1;
   font-size: 0.95rem;
   transition: background 0.3s ease;
 }
@@ -591,6 +617,102 @@ css.cert-category {
 
 .sdg-badge span strong {
   color: #5dcec1;
+}
+
+/* The grid container for all the project cards */
+.project-grid {
+  display: grid;
+  /* Creates a responsive grid: columns are at least 320px, 
+     and will auto-fit as many as possible per row. */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* The main card for each project */
+.project-card {
+  background-color: #1E293B; /* A dark slate color */
+  border-radius: 12px;
+  overflow: hidden; /* Ensures the image corners are rounded */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Stacks image and content vertically */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Lifts the card on hover */
+  box-shadow: 0 8px 15px rgba(93, 206, 193, 0.1), 0 20px 40px rgba(93, 206, 193, 0.15);
+}
+
+/* Project image styling */
+.project-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Ensures a consistent 16:9 aspect ratio */
+  object-fit: cover; /* Prevents image distortion */
+  display: block;
+}
+
+/* Container for all the text content */
+.project-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows this container to fill the remaining space */
+}
+
+.project-content h3 {
+  font-size: 1.2rem;
+  color: #E2E8F0;
+  margin-bottom: 0.5rem;
+}
+
+.project-content p {
+  color: #94A3B8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1; /* Pushes the tech list and links to the bottom */
+  margin-bottom: 1.25rem;
+}
+
+/* Styling for the tech stack pills */
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.25rem;
+}
+
+.project-tech-list li {
+  background: rgba(93, 206, 193, 0.1);
+  border: 1px solid rgba(93, 206, 193, 0.3);
+  border-radius: 2rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  color: #5dcec1;
+  font-weight: 500;
+}
+
+/* Links for live demo and source code */
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto; /* Pushes links to the very bottom */
+}
+
+.project-links a {
+  color: #94A3B8;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #5eead4; /* Accent color on hover */
 }
 
 /* Change text selection color */
