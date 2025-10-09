@@ -384,6 +384,20 @@ p {
   font-weight: 500;
 }
 
+.diploma-link {
+   display: inline-block;
+  margin-top: 0.5rem;
+  color: #5dcec1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.diploma-link:hover {
+  color: #E2E8F0;
+}
+
 .experience-item {
   position: relative;
   padding: 1.5rem 1.5rem 1.5rem 3rem;
@@ -671,7 +685,6 @@ css.cert-category {
   font-size: 0.95rem;
   line-height: 1.6;
   flex-grow: 1;
-  /* Pushes the tech list and links to the bottom */
   margin-bottom: 1.25rem;
 }
 
@@ -772,7 +785,6 @@ css.cert-category {
 /* Footer styling */
 .footer {
   background-color: transparent;
-  /* match page background */
   color: rgba(226, 232, 240, 0.8);
   padding: 2rem 6rem;
   text-align: center;
@@ -794,8 +806,7 @@ css.cert-category {
 }
 
 .footer .footer-contacts a:hover {
-  color: #E2E8F0;
-  /* bright on hover */
+  color: #5dcec1;
 }
 
 ::-webkit-scrollbar {
