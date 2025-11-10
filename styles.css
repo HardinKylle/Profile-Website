@@ -688,6 +688,23 @@ css.cert-category {
   margin-bottom: 1.25rem;
 }
 
+
+/* --- Project Card Link Styles --- */
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-content h3 a {
+  color: #E2E8F0; /* Matches original h3 color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-content h3 a:hover {
+  color: #5dcec1; /* Adds hover effect */
+}
+
 /* Styling for the tech stack pills */
 .project-tech-list {
   display: flex;
