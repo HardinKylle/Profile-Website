@@ -176,6 +176,37 @@ function loadHeaderAndFooter() {
       if (headerPlaceholder) {
         headerPlaceholder.innerHTML = data;
       }
+
+      // -----------------------------------------------------------------
+      // MOVE THE LISTENER CODE INSIDE HERE
+      // -----------------------------------------------------------------
+      // Now that the header is loaded, find its links and add listeners
+      const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
+      dropdownLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+
+          // Check for .html page links
+          if (href.endsWith(".html")) {
+            e.preventDefault(); // <-- This is the key line that stops the "unstyled page" problem
+            updateSidebarActive(href);
+            loadContent(href);
+          }
+
+          // Check for the contact link
+          if (href === "index.html#contact") {
+            e.preventDefault();
+            const footer = document.querySelector('.footer');
+            if (footer) {
+              footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+      // -----------------------------------------------------------------
+      // END OF MOVED CODE
+      // -----------------------------------------------------------------
+
     })
     .catch(error => console.error('Error loading header:', error));
 
