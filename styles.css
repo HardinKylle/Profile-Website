@@ -134,7 +134,7 @@ p {
   background: transparent;
   border-radius: 12px;
   overflow: visible;
-
+  align-items: flex-start;
 }
 
 /* Sidebar (30%) */
@@ -671,7 +671,6 @@ css.cert-category {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .project-content h3 {
@@ -890,8 +889,6 @@ css.cert-category {
   animation: typing 1s steps(20) forwards, blink 0.5s step-end infinite;
 }
 
-
-
 @keyframes typing {
   from {
     width: 0;
@@ -1015,3 +1012,4 @@ css.cert-category {
   .project-image-gallery {
     grid-template-columns: 1fr;
   }
+}
