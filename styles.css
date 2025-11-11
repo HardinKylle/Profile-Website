@@ -745,56 +745,113 @@ css.cert-category {
   color: #5eead4;
 }
 
-/* --- New Layout for Project Pages --- */
 .layout-single-column {
-  /* This mimics the original .layout class but without flex */
   width: 70%;
-  margin: 70px auto 40px auto; /* 70px top margin to clear the fixed header */
+  margin: 100px auto 40px auto; /* 100px top margin to clear the fixed header */
   min-height: 90vh;
   background: transparent;
   border-radius: 12px;
   overflow: visible;
 }
 
-/* --- Project Detail Styling (Optional) --- */
-#project-detail h1 {
-  font-size: 2.5rem;
+/* --- 2. Project Header --- */
+.project-detail-page h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
   color: #E2E8F0;
+  margin-bottom: 0.5rem;
+}
+
+.project-tagline {
+  font-size: 1.25rem;
+  color: #94A3B8; /* Muted text color */
+  margin-bottom: 2rem;
+}
+
+.project-hero-image {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.project-hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(93, 206, 193, 0.3);
+}
+
+/* --- 3. Project Meta Grid --- */
+.project-meta-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 for info, 1/3 for links */
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(93, 206, 193, 0.3);
+}
+
+.meta-item {
   margin-bottom: 1.5rem;
 }
 
-#project-detail h2 {
+.project-meta-grid h3 {
+  color: rgba(226, 232, 240, 0.7);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+/* --- 4. Project Detail Links (Buttons) --- */
+.project-detail-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #E2E8F0;
+  background: rgba(93, 206, 193, 0.1);
+  border: 1px solid rgba(93, 206, 193, 0.3);
+  border-radius: 8px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-detail-links a:hover {
+  background: rgba(93, 206, 193, 0.2);
+  border-color: rgba(93, 206, 193, 0.5);
+}
+
+/* --- 5. Project Main Content --- */
+.project-detail-page h2 {
   font-size: 1.8rem;
   color: #E2E8F0;
+  font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-/* Re-using the responsibilities list style */
-#project-detail .responsibilities {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 1rem;
-}
-
-#project-detail .responsibilities li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
+/* Re-using your .responsibilities list style */
+.project-detail-page .responsibilities li {
   color: #94A3B8;
 }
 
-#project-detail .responsibilities li::before {
-  content: '›';
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #5eead4;
-  font-weight: bold;
-  font-size: 1.2rem;
+/* --- 6. Image Gallery --- */
+.project-image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2-column grid */
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
+.project-image-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(93, 206, 193, 0.2);
+} 
 ::selection {
   background-color: #5dcec1;
   color: #3d3c3c;
@@ -940,3 +997,21 @@ css.cert-category {
     position: static;
   }
 }
+
+@media (max-width: 992px) {
+  /* Make the layout full-width on mobile */
+  .layout-single-column {
+    width: 90%;
+    margin-top: 80px;
+  }
+
+  /* Stack the meta grid on mobile */
+  .project-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Stack the gallery on mobile */
+  .project-image-gallery {
+    grid-template-columns: 1fr;
+  }

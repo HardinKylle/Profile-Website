@@ -4,19 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>Kylle Hardin - LigtasMax Project</title>
-
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
-
 </head>
 
 <body>
-
   <header class="header">
     <a href="index.html" class="logo">
       <img src="assets/images/logo.png" alt="Kylle Hardin Logo">
@@ -45,34 +41,78 @@
   <div class="layout-single-column">
     <main class="main">
 
-      <section id="project-detail">
+      <section class="project-detail-page">
+
         <h1>LigtasMax: Disaster Assistance System</h1>
         
-        <img src="assets/images/ligtasmaxWeb.png" alt="LigtasMax Login Screen" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
-
-        <h2>Project Overview</h2>
-        <p style="line-height: 1.8; margin-bottom: 1.5rem;">
-          LigtasMax is a comprehensive mobile and web application I helped develop as my thesis project. It was designed to enhance disaster response in Manila by providing real-time, location-based alerts and helping emergency services prioritize aid efforts.
+        <p class="project-tagline">
+          A geofencing-powered web and mobile app to enhance disaster response in Manila.
         </p>
+        
+        <div class="project-hero-image">
+          <img src="assets/images/ligtasmaxWeb.png" alt="LigtasMax Admin Dashboard Login">
+        </div>
 
-        <h2>Key Features</h2>
+        <div class="project-meta-grid">
+          <div class="project-meta-info">
+            <div class="meta-item">
+              <h3>My Role</h3>
+              <p>Project Manager & Full-Stack Developer</p>
+            </div>
+            <div class="meta-item">
+              <h3>Duration</h3>
+              <p>Sept 2024 - July 2025</p>
+            </div>
+            <div class="meta-item">
+              <h3>Tech Stack</h3>
+              <ul class="skill-list">
+                <li>Firebase</li>
+                <li>DBSCAN Algorithm</li>
+                <li>Geofencing</li>
+                <li>GIS</li>
+                <li>Mobile (iOS & Android)</li>
+                <li>Web Application</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="project-meta-links">
+            <h3>Project Links</h3>
+            <a href="https://drive.google.com/file/d/1XA06XpBNhsJYmtoB_AuPQzF-JnmRTk1g/view?usp=sharing" target="_blank" class="project-detail-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>View App Demo</span>
+            </a>
+            <a href="https://github.com/HardinKylle" target="_blank" class="project-detail-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.54 2.73c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>View Source Code</span>
+            </a>
+          </div>
+        </div>
+
+        <h2>The Challenge</h2>
+        <p>The City of Manila's disaster response was often reactive, lacking real-time, ground-truth data. Emergency services struggled with prioritizing aid due to a lack of accurate information on where the most affected populations were located during floods and fires.</p>
+
+        <h2>My Contribution</h2>
+        <p>As Project Manager, I led our team through the entire development lifecycle. My specific technical contributions included:</p>
         <ul class="responsibilities">
-          <li>Real-time, community-based reporting for floods and fires.</li>
-          <li>Geofencing to automatically alert users within a disaster area.</li>
-          <li>Use of the DBSCAN clustering algorithm to analyze user density and identify hotspots for aid.</li>
-          <li>A visual dashboard for the GIS Manila Data Hub for monitoring and coordination.</li>
+          <li>Designing and implementing the real-time database schema on Google Firebase.</li>
+          <li>Developing the core logic for the DBSCAN clustering algorithm to analyze user density and identify disaster hotspots.</li>
+          <li>Integrating the Google Maps API for geospatial location tracking and geofencing.</li>
+          <li>Coordinating the development of the visual dashboard for the GIS Manila Data Hub.</li>
         </ul>
 
-        <h2>Technology Stack</h2>
-        <ul class="skill-list">
-          <li>Firebase</li>
-          <li>DBSCAN Algorithm</li>
-          <li>Geofencing</li>
-          <li>GIS</li>
-          <li>Mobile (iOS & Android)</li>
-          <li>Web Application</li>
-          <li>Google API Integration</li>
-        </ul>
+        <h2>In-App Gallery</h2>
+        <p>Here are a few more screenshots from the application, including the mobile app interface and the admin dashboard.</p>
+        
+        <div class="project-image-gallery">
+          <img src="https://placehold.co/600x400/0F172A/FFFFFF?text=Mobile+App+Screenshot" alt="Mobile App Screenshot">
+          <img src="https://placehold.co/600x400/0F172A/FFFFFF?text=Admin+Dashboard+Analytics" alt="Admin Dashboard Analytics">
+          <img src="https://placehold.co/600x400/0F172A/FFFFFF?text=Heatmap+View" alt="Heatmap View">
+          <img src="https://placehold.co/600x400/0F172A/FFFFFF?text=Alert+System+Example" alt="Alert System Example">
+        </div>
+
+        <h2>What I Learned</h2>
+        <p>This thesis project was an incredible learning experience. I not only solidified my technical skills in full-stack development and cloud architecture but also learned invaluable lessons in project management, team leadership, and the unique challenges of building software for a critical public service. Applying the DBSCAN algorithm to a real-world problem was particularly rewarding.</p>
 
       </section>
 
@@ -91,5 +131,6 @@
     </div>
   </footer>
 
-  </body>
-</html>
+</body>
+
+</html>                                                   
