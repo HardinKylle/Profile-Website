@@ -699,8 +699,8 @@ css.cert-category {
 
 /* --- Project Card Link Styles --- */
 .project-card-link {
-pointer-events: none; /* Makes the link not clickable */
-  cursor: default;
+ text-decoration: none;
+  color: inherit;
 }
 
 .project-content h3 a {
