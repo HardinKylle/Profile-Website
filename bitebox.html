@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylle Hardin - CSExpo Website</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .project-side-meta {
+            background: rgba(93, 206, 193, 0.05);
+            border: 1px solid rgba(93, 206, 193, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .project-side-meta .meta-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .project-main-info h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="layout-single-column project-detail-page">
+
+        <h1>BiteBox</h1>
+
+        <p class="project-tagline">
+            A React Native mobile application built with Expo to help users find restaurants. It uses maps and location
+            services to suggest nearby places.
+        </p>
+        <div class="project-hero-image">
+            <img src="assets/images/bitebox.png" alt="BiteBox UI">
+        </div>
+
+
+        <div class="project-meta-grid">
+
+            <!-- Left Column (2/3 width): Main Details -->
+            <div class="project-main-info">
+
+                <h2 style="margin-top: 4">My Contributions</h2>
+
+                <ul class="advocacy-list">
+                    <li>Designed and implemented the overall user interface for the app's core features: the Home, Map,
+                        and Search History screens
+                    </li>
+                    <li>Integrated the Google Places API to power the app's main function: searching for restaurants
+                        based on the user's location
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-side-meta">
+                <div class="meta-item">
+                    <h3>Role</h3>
+                    <p>Full-stack developer</p>
+                </div>
+
+                <div class="meta-item">
+                    <h3>Keywords</h3>
+                    <ul class="project-tech-list">
+                        <li>React Native</li>
+                        <li>JavaScript</li>
+                        <li>Expo</li>
+                        <li>Google Maps API</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/FuseBucks/BiteBox" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Source Code</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylle Hardin - CSExpo Website</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .project-side-meta {
+            background: rgba(93, 206, 193, 0.05);
+            border: 1px solid rgba(93, 206, 193, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .project-side-meta .meta-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .project-main-info h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="layout-single-column project-detail-page">
+
+        <h1>CS Expo 2025</h1>
+
+        <p class="project-tagline">
+            A web application for the CS Expo 2025 event, designed to showcase different thesis projects and displays
+            event information.
+        </p>
+        <div class="project-hero-image">
+            <img src="assets/images/csexpo.png" alt="CS Expo UI">
+        </div>
+
+
+        <div class="project-meta-grid">
+
+            <!-- Left Column (2/3 width): Main Details -->
+            <div class="project-main-info">
+
+                <h2 style="margin-top: 4">My Contributions</h2>
+
+                <ul class="advocacy-list">
+                    <li>Developed a responsive projects section to feature dozens of students’ thesis projects
+                    </li>
+                    <li>Implemented dynamic pages that populated content based on user-selected data
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-side-meta">
+                <div class="meta-item">
+                    <h3>Role</h3>
+                    <p>Full-stack developer</p>
+                </div>
+
+                <div class="meta-item">
+                    <h3>Keywords</h3>
+                    <ul class="project-tech-list">
+                        <li>TypeScript</li>
+                        <li>Supabase</li>
+                        <li>Git</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div class="meta-item">
+                    <h3>Links</h3>
+                    <div class="project-links">
+                        <a href="https://cs-expo-2025.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Website</span>
+                        </a>
+
+                        <a href="https://github.com/HardinKylle/cs_expo_2025" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

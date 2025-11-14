@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylle Hardin - MockMe</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .project-side-meta {
+            background: rgba(93, 206, 193, 0.05);
+            border: 1px solid rgba(93, 206, 193, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .project-side-meta .meta-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .project-main-info h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="layout-single-column project-detail-page">
+
+        <h1>MockMe</h1>
+
+        <p class="project-tagline">
+           A 3D device mockup web application that allows you to upload UI images/videos, view them in a 3D model, animate scene sequences, and capture visual assets for design showcases. 
+        </p>
+        <div class="project-hero-image">
+            <img src="assets/images/mockme.png" alt="MockMe UI">
+        </div>
+
+
+        <div class="project-meta-grid">
+
+            <!-- Left Column (2/3 width): Main Details -->
+            <div class="project-main-info">
+
+                <h2 style="margin-top: 4">My Contributions</h2>
+
+                <ul class="advocacy-list">
+                    <li>Developed a browser-based 3D product mockup generator where users can apply custom UI mock-ups
+                        to device models, modify background colors, and manipulate the scene using scene controls or
+                        preset camera views
+                    </li>
+                    <li>Built a timeline-based animation editor allowing users to create custom camera movement tracks
+                        and set animation durations
+                    </li>
+                    <li>Integrated Firebase (Auth and Firestore) to manage user accounts and enable saving/loading of
+                        user projects and assets
+                    </li>
+                    <li>Implemented a high-resolution export feature, allowing users to capture their 3D animations as
+                        MP4 videos or images at various aspect ratios
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-side-meta">
+                <div class="meta-item">
+                    <h3>Role</h3>
+                    <p>Full-stack developer</p>
+                </div>
+
+                <div class="meta-item">
+                    <h3>Keywords</h3>
+                    <ul class="project-tech-list">
+                        <li>TypeScript</li>
+                        <li>Three.js</li>
+                        <li>Next.js</li>
+                        <li>React</li>
+                        <li>Firebase</li>
+                        <li>Git</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div class="meta-item">
+                    <h3>Links</h3>
+                    <div class="project-links">
+                        <a href="https://mock-me.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Website</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
